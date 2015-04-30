@@ -1,0 +1,177 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0; 
+
+		}
+		body{
+			font-size: 12px;
+			line-height: 1.7;
+		}
+		li{
+			list-style: none;
+
+		}
+		#scrollContent{
+			width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		.item{
+			padding: 20px;
+			margin-bottom: 20px;
+			border: 1px dotted #0088bb;
+		}
+		.item h2{
+			font-size: 16px;
+			font-weight: bold;
+			border-bottom: 2px solid #0088bb;
+			margin-bottom: 10px;
+		}
+		.item li{
+			display: inline;
+			margin-right: 10px;
+		}
+		.item img{
+			width: 230px;
+			height: 230px;
+			border: 0;
+		}
+
+		#scrollMenu{
+			position: fixed;
+			top:100px;
+			left: 50%;
+			margin-left: 400px;
+		}
+		#scrollMenu ul li a{
+			display: block;
+			margin: 5px auto;
+			font-size: 14px;
+			font-weight: bold;
+			color: #333;
+			width: 80px;
+			height: 50px;
+			line-height: 50px;
+			text-decoration: none;
+			text-align: center;
+		}
+		#scrollMenu ul li a:hover,
+		#scrollMenu ul li .current{
+			color: #fff;
+			background-color: #0088bb;
+		}
+
+		/*ie6 hack*/
+		* html, * html body{
+			background-image: url(about:blank);
+			background-attachment: fixed;
+		}
+
+		* html #menu{
+			position: absolute;
+			top: expression(((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+100+'px');
+		}
+
+	</style>
+	<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/scrollMenu.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			scrollMenu('scrollMenu','scrollContent');
+		});
+
+
+	</script>
+</head>
+<body>
+	<div id="scrollMenu">
+		<ul>
+			<li><a href="#item1" class="current">1F 男装</a></li>
+			<li><a href="#item2">2F 女装</a></li>
+			<li><a href="#item3">3F 美妆</a></li>
+			<li><a href="#item4">4F 数码</a></li>
+			<li><a href="#item5">5F 母婴</a></li>
+		</ul>
+	</div>
+	<div id="scrollContent">
+		<h1>滚动导航</h1>
+		<div id="item1"	class="item">
+			<h2>1F 男装</h2>
+			<ul>
+				<li><a href=""><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/1F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/1F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item2"	class="item">
+			<h2>2F 女装</h2>
+			<ul>
+				<li><a href=""><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/2F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/2F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item3"	class="item">
+			<h2>3F 美妆</h2>
+			<ul>
+				<li><a href=""><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/3F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/3F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item4"	class="item">
+			<h2>4F 数码</h2>
+			<ul>
+				<li><a href=""><img src="images/4F.png" alt=""></a></li>
+				<li><a href=""><img src="images/4F.png" alt=""></a></li>
+				<li><a href=""><img src="images/4F.png" alt=""></a></li>
+				<li><a href=""><img src="images/4F.png" alt=""></a></li>
+				<li><a href=""><img src="images/4F.png" alt=""></a></li>
+				<li><a href=""><img src="images/4F.png" alt=""></a></li>
+				<li><a href=""><img src="images/4F.png" alt=""></a></li>
+				<li><a href=""><img src="images/4F.png" alt=""></a></li>
+				<li><a href=""><img src="images/4F.png" alt=""></a></li>
+			</ul>
+		</div>
+		<div id="item5"	class="item">
+			<h2>5F 母婴</h2>
+			<ul>
+				<li><a href=""><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/5F.jpg" alt=""></a></li>
+				<li><a href=""><img src="images/5F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>
