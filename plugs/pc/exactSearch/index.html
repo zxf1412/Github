@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="ui-widget">
+	  <label for="tags">Tags: </label>
+	  <input id="tags" onblur="">
+	</div>
+
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="http://www.shininghub.com/wesource/create_inquiry/search_category?q=89"></script>
+	<script type="text/javascript">
+	$(function() {
+		$.extend({
+			escapeRegex: function( value ) {
+				
+				return value.replace( /[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&" );
+			},
+			filter: function( array, term ) {
+				var matcher = new RegExp( $.escapeRegex( term ), "i" );
+				return $.grep( array, function( value ) {
+					return matcher.test( value.label || value.value || value );
+				});
+			}
+		})
+
+	  });
+	  $(document).ready(function() {
+			$("#tags").blur(function(){
+				var newArr = [];
+				var inputVal = $("#tags").val();
+				for(var i=0;i<categoryData.length;i++){
+					newArr.push(categoryData[i].path)
+				}
+				var searchResult = $.filter(newArr, inputVal);
+				alert(searchResult);
+			})
+	  });
+	  
+
+	</script>
+</body>
+</html>
