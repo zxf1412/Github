@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>tabs</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="tabs.js"></script>
+</head>
+<body>
+	<div class="imgWrap" data-type="imgCircle">
+		<ul class="imgContainer" >
+			
+		</ul>
+		<ul class="imgControl">
+		</ul>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			var imgArr = ['images/img1.jpg','images/img2.jpg','images/img3.png','images/img4.png','images/img5.png']
+
+			doImgCircle.init({
+				width:'1000px',
+				height:'600px',
+				imgArr:imgArr
+
+			});
+			doImgCircle.start();
+		});
+
+
+	</script>
+</body>
+</html>
